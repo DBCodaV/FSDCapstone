@@ -1,0 +1,32 @@
+package com.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.entity.Booking;
+import com.entity.Login;
+import com.repository.BookingRepository;
+import com.repository.LoginRepository;
+
+@Service
+public class BookingService {
+	@Autowired
+	BookingRepository bookRepo;
+	
+	@Autowired
+	LoginRepository loginRepo;
+	
+	public List<Booking> getBookingsFromEmail(String email){
+		Optional<Login> res = loginRepo.findById(email);
+		if(res.isPresent()) {
+			Login user = res.get();
+			return user.getBookings();
+		} else {
+			return null;
+		}
+	}
+
+}

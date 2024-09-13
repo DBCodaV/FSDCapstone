@@ -13,7 +13,13 @@ public class Film {
 	
 	private String name;
 	private String rating;
-	
+	private String description;
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public long getFilm_id() {
 		return film_id;
 	}

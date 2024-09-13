@@ -1,0 +1,19 @@
+package com.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.repository.BookingRepository;
+import com.repository.LoginRepository;
+
+@Service
+public class BookingService {
+	@Autowired
+	BookingRepository bookRepo;
+	
+	@Autowired
+	LoginRepository loginRepo;
+	
+	
+
+}

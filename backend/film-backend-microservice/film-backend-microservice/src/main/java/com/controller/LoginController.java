@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.entity.Login;
 import com.service.LoginService;
 
-@RequestMapping("login")
+
 @RestController
 @CrossOrigin
+@RequestMapping("login")
 public class LoginController {
 	@Autowired
 	LoginService logServ;

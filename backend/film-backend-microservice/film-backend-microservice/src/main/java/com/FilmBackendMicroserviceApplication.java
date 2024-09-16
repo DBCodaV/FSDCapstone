@@ -9,7 +9,9 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import com.entity.Cinema;
 import com.entity.Login;
+import com.repository.CinemaRepository;
 import com.repository.LoginRepository;
 
 import jakarta.annotation.PostConstruct;
@@ -21,6 +23,9 @@ import jakarta.annotation.PostConstruct;
 public class FilmBackendMicroserviceApplication {
 	@Autowired
 	LoginRepository loginRepository;
+	
+	@Autowired
+	CinemaRepository cinemaRepo;
 	@PostConstruct
 	public void init() {
 		Login ll = new Login();
@@ -32,6 +37,16 @@ public class FilmBackendMicroserviceApplication {
 			System.out.println("Already account present");
 		}else {
 			loginRepository.save(ll);
+			System.err.println("Admin account created");
+		}
+		Cinema cin = new Cinema();
+		cin.setAddress("Somewhere");
+		cin.setName("The Lux");
+		Optional<Cinema> res2  = cinemaRepo.getCinemaByName(cin.getName());
+		if(res2.isPresent()) {
+			System.out.println("Already account present");
+		} else {
+			cinemaRepo.save(cin);
 			System.err.println("Admin account created");
 		}
 	}

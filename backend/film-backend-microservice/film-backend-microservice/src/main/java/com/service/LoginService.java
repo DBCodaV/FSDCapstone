@@ -27,7 +27,7 @@ public class LoginService {
 				}
 			}
 			else {
-				return "Password not correct";
+				return "Email or Password not correct";
 			}
 		} else {
 			return "Email not found";

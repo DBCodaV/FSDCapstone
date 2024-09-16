@@ -18,7 +18,7 @@ public class Cinema {
 	private String address;
 	
 	@OneToMany
-    @JoinColumn(name = "department_id")
+    @JoinColumn(name = "cinema_id")
 	private List<Film> films;
 
 	public long getCinema_id() {

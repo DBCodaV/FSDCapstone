@@ -30,6 +30,7 @@ services:
       - mysql-service
       - eureka-server
     restart: always
+  
   react-js-service:
     build: ./frontend/frontend-app/
     container_name: reactjs-container

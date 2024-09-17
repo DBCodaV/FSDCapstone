@@ -18,7 +18,7 @@ function SignUp() {
         let details = { emailid: email, password: password, typeofuser: type }
         try {
             axios.post(url, details).then(result => {
-                console.log(result);
+                
                 if (result.data === "Account created") {
                     sessionStorage.setItem("user", email);
                     navigate("/customer")

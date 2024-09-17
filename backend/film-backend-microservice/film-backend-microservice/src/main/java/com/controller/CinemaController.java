@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,12 +30,12 @@ public class CinemaController {
 	}
 	
 	@GetMapping(value="byid/{cid}",produces=MediaType.APPLICATION_JSON_VALUE)
-	public Cinema getCinema(long cid) {
+	public Cinema getCinema(@PathVariable(value="cid") Long cid) {
 		return cinServ.getCinema(cid);
 	}
 	
 	@PostMapping(value="addFilm/{cid}/{fid}")
-	public String addFilmToCinema(long cid, long fid) {
+	public String addFilmToCinema(@PathVariable(value="cid") Long cid, @PathVariable(value="fid") Long fid) {
 		return cinServ.addFilmToCinema(cid, fid);
 		
 	}

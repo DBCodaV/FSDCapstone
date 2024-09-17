@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 
 function CinemaList(){
     const [list,setList] = useState([])
@@ -8,6 +9,7 @@ function CinemaList(){
         try{
             axios.get(url).then(result => {
                 setList(result.data);
+                
             })
         } catch(e){
             console.log(e);
@@ -16,7 +18,7 @@ function CinemaList(){
     return(<div><p>Cinema List Page</p>
     {list.map((cinema) => {
         return(
-            <p>{cinema.name}</p>
+            <p><Link to={"/cinema/info?id="+cinema.cinema_id}>{cinema.name}</Link></p>
         )
     })}</div>)
 }

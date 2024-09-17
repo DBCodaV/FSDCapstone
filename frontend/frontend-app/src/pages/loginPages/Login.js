@@ -17,7 +17,7 @@ function Login() {
         let details = { emailid: email, password: password, typeofuser:type }
         try {
             axios.post(url, details).then(result => {
-                console.log(result);
+                
                 if (result.data === "User login success") {
                     sessionStorage.setItem("user", email);
                     navigate("/customer")

@@ -7,6 +7,7 @@ import AdminPage from './pages/loginPages/AdminPage';
 import CinemaList from './pages/cinemaPages/cinemaList';
 import ErrorPage from './component/ErrorPage';
 import SignUp from './pages/loginPages/Signup';
+import CinemaPage from './pages/cinemaPages/cinemaPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <div>
             <Routes>
             <Route path={'/list'} element={<CinemaList/>} />
+            <Route path={'/info'} element={<CinemaPage/>} />
             </Routes>
             </div>
 

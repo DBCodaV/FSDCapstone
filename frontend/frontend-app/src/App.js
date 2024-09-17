@@ -6,6 +6,7 @@ import Login from './pages/loginPages/Login';
 import AdminPage from './pages/loginPages/AdminPage';
 import CinemaList from './pages/cinemaPages/cinemaList';
 import ErrorPage from './component/ErrorPage';
+import SignUp from './pages/loginPages/Signup';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Login />}></Route>
+        <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/admin' element={<AdminPage />}></Route>
         <Route path='/customer' element={<AdminPage />}></Route>
         

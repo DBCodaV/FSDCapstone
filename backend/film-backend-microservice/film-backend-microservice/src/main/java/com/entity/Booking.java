@@ -20,6 +20,18 @@ public class Booking {
 	@OneToOne
 	@JoinColumn(name="film_booking_id")
 	private Film film;
+	
+	@OneToOne
+	@JoinColumn(name="cinema_booking_id")
+	private Cinema cinema;
+	
+	public Cinema getCinema() {
+		return cinema;
+	}
+
+	public void setCinema(Cinema cinema) {
+		this.cinema = cinema;
+	}
 
 	public long getBooking_id() {
 		return booking_id;

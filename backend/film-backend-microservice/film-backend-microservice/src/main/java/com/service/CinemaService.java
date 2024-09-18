@@ -47,4 +47,8 @@ public class CinemaService {
 		return "Film Added";
 	}
 
+	public String addCinema(Cinema c) {
+		cinemaRepo.save(c);
+		return "Cinema Added";
+	}
 }

@@ -17,10 +17,11 @@ public class LoginService {
 		Optional<Login> res = loginRepo.findById(login.getEmailid());
 		if(res.isPresent()) {
 			Login ll = res.get();
+			
 			if(ll.getPassword().equals(login.getPassword())) {
 				if(ll.getTypeofuser().equals(login.getTypeofuser()) && ll.getTypeofuser().equals("admin")) {
 					return "Admin login success";
-				} else if (ll.getTypeofuser().equals(login.getTypeofuser()) && ll.getTypeofuser().equals("user")) {
+				} else if (ll.getTypeofuser().equals(login.getTypeofuser()) && ll.getTypeofuser().equals("customer")) {
 					return "User login success";
 				} else {
 					return "Wrong type of user";

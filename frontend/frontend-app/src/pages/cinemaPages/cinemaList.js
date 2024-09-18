@@ -1,26 +1,28 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
+import BackButton from "../../component/BackButton";
 
-function CinemaList(){
-    const [list,setList] = useState([])
+function CinemaList() {
+    const [list, setList] = useState([])
     let url = process.env.REACT_APP_MICRO_URL + "/cinema/list";
     useEffect(() => {
-        try{
+        try {
             axios.get(url).then(result => {
                 setList(result.data);
-                
+
             })
-        } catch(e){
+        } catch (e) {
             console.log(e);
         }
-    },[])
-    return(<div><p>Cinema List Page</p>
-    {list.map((cinema) => {
-        return(
-            <p><Link to={"/cinema/info?id="+cinema.cinema_id}>{cinema.name}</Link></p>
-        )
-    })}</div>)
+    }, [])
+    return (<div><p>Cinema List Page</p>
+        {list.map((cinema) => {
+            return (
+                <p><Link to={"/cinema/info?id=" + cinema.cinema_id}>{cinema.name}</Link></p>
+            )
+        })}
+        <BackButton /></div>)
 }
 
 export default CinemaList

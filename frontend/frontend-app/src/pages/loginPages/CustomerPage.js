@@ -4,12 +4,15 @@ function CustomerPage(){
     return(
         <div>
             <h1>Welcome to NMS Cinemas</h1>
-            <ul>
-                <li><Link>View Local Cinemas</Link></li>
-                <li><Link>View Your Bookings</Link></li>
-                <li><Link>Create New Booking</Link></li>
-                <li><Link to="/logout">Logout</Link></li>
-            </ul>
+            <div>
+                <Link to={"/cinema/list"}>View Local Cinemas</Link>
+                <br/>
+                <Link to={"/booking/list"}>View Your Bookings</Link>
+                <br/>
+                <Link to={"/booking/add"}>Create New Booking</Link>
+                <br/>
+                <Link to="/logout">Logout</Link>
+                </div>
         </div>
     )
 }

@@ -32,7 +32,7 @@ public class FilmController {
 		return filmServ.getFilm(fid);
 	}
 	
-	@PostMapping(value="create", consumes=MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value="add", consumes=MediaType.APPLICATION_JSON_VALUE)
 	public String createFilm(@RequestBody Film film) {
 		return filmServ.createFilm(film);
 	}

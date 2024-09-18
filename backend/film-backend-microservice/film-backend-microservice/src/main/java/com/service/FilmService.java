@@ -28,7 +28,7 @@ public class FilmService {
 	}
 	public String createFilm(Film film) {
 		filmRepo.save(film);
-		return "created";
+		return "Film created";
 	}
 	
 }

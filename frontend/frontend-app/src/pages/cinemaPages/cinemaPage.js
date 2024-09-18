@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import BackButton from "../../component/BackButton";
 import axios from "axios";
 function CinemaPage() {
-    let navigate = useNavigate()
+
     const [searchParams, setParams] = useSearchParams();
     let id = searchParams.get("id");
     let url = process.env.REACT_APP_MICRO_URL + "/cinema/byid/" + id;
@@ -18,15 +19,17 @@ function CinemaPage() {
         }
     }, [])
 
-    function goBack(){
-        navigate(-1);
-    }
-    return(
+
+    return (
         <div>
             <h1>Cinema Details</h1>
             <p>Name: {cinema.name}</p>
             <p>Address: {cinema.address}</p>
-
+            <p>Films:</p>
+            {(cinema.films).map((film) => {
+                <p>{film.name}</p>
+            })}
+            <BackButton />
         </div>
     )
 

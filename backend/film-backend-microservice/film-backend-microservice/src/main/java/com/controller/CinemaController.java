@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.entity.Booking;
 import com.entity.Cinema;
 import com.entity.Login;
 import com.service.CinemaService;
@@ -38,6 +39,10 @@ public class CinemaController {
 	public String addFilmToCinema(@PathVariable(value="cid") Long cid, @PathVariable(value="fid") Long fid) {
 		return cinServ.addFilmToCinema(cid, fid);
 		
+	}
+	@PostMapping(value="add",consumes=MediaType.APPLICATION_JSON_VALUE)
+	public String addCinema(@RequestBody Cinema c) {
+		return cinServ.addCinema(c);
 	}
 
 }

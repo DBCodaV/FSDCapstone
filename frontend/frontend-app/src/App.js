@@ -13,6 +13,9 @@ import FilmList from './pages/filmPages/filmList';
 import AddFilm from './pages/filmPages/addFilm';
 import CustomerPage from './pages/loginPages/CustomerPage';
 import Logout from './pages/loginPages/Logout';
+import AddFilmCinema from './pages/cinemaPages/AddFilmToCinema';
+import MakeBooking from './pages/bookingPages/makeBooking';
+import BookingList from './pages/bookingPages/BookingList';
 
 function App() {
   return (
@@ -49,9 +52,9 @@ function App() {
         <Route path={'/booking/*'} element={
           <div>
             <Routes>
-              <Route path={'/list'} element={<FilmList />} />
+              <Route path={'/list'} element={<BookingList />} />
               <Route path={'/info'} element={<CinemaPage />} />
-              <Route path={'/add'} element={<AddCinema />} />
+              <Route path={'/add'} element={<MakeBooking />} />
             </Routes>
           </div>
         }></Route>

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,18 +20,19 @@ import com.service.BookingService;
 @RequestMapping("booking")
 @CrossOrigin()
 public class BookingController {
-	
+
 	@Autowired
 	BookingService bookServ;
-	
-	@PostMapping(value="store",consumes=MediaType.APPLICATION_JSON_VALUE)
-	public String createBooking(@RequestBody Booking booking, @RequestHeader("email") String email) {
+
+	@PostMapping(value = "store", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String createBooking(@RequestBody Booking booking, @RequestHeader(value = "email") String email) {
+
 		return bookServ.createBooking(booking, email);
 	}
-	
-	@GetMapping(value="list", produces=MediaType.APPLICATION_JSON_VALUE)
-	public List<Booking> getBooking(@RequestHeader("email") String email){
+
+	@GetMapping(value = "list", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Booking> getBooking(@RequestHeader(value = "email") String email) {
 		return bookServ.getBookingsFromEmail(email);
 	}
-	
+
 }

@@ -29,6 +29,8 @@ public class BookingService {
 		}
 	}
 	public String createBooking(Booking booking, String email) {
+		System.out.println(booking);
+		System.out.println(email);
 		List<Booking> curList = getBookingsFromEmail(email);
 		if(curList==null) {
 			return "Booking failed";

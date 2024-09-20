@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form";
 import BackButton from "../../component/BackButton";
 import axios from "axios";
-function AddFilmCinema(){
+function AddFilmCinema() {
     const [cid, setCid] = useState(0)
     const [fid, setFid] = useState(0)
     const [cinemas, setCinemas] = useState([])
@@ -14,7 +14,7 @@ function AddFilmCinema(){
     let url = process.env.REACT_APP_MICRO_URL + "/cinema/addFilm/";
     let navigate = useNavigate();
     useEffect(() => {
-        let cinemaUrl= process.env.REACT_APP_MICRO_URL + "/cinema/list";
+        let cinemaUrl = process.env.REACT_APP_MICRO_URL + "/cinema/list";
         try {
             axios.get(cinemaUrl).then(result => {
                 setCinemas(result.data);
@@ -23,7 +23,7 @@ function AddFilmCinema(){
         } catch (e) {
             console.log(e);
         }
-        let filmUrl= process.env.REACT_APP_MICRO_URL + "/films/list";
+        let filmUrl = process.env.REACT_APP_MICRO_URL + "/films/list";
         try {
             axios.get(filmUrl).then(result => {
                 setFilms(result.data);
@@ -32,16 +32,16 @@ function AddFilmCinema(){
         } catch (e) {
             console.log(e);
         }
-    },[])
+    }, [])
     let handleSubmit = (event) => {
         event.preventDefault();
 
-        let tempUrl = url+cid+"/"+fid;
+        let tempUrl = url + cid + "/" + fid;
         console.log(tempUrl);
         try {
             axios.post(tempUrl).then(result => {
-                console.log(result.data);
-                if (result.data === "Film created") {
+
+                if (result.data === "Film Added") {
                     navigate("/admin")
                 }
                 else {
@@ -54,33 +54,37 @@ function AddFilmCinema(){
             setError("Something went wrong")
         }
     }
-    return(
-        <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label>Cinema Selection</Form.Label>
-                <Form.Select aria-label="Default select example" onChange={(event) => setCid(event.target.value)}>
-                    {cinemas.map((cinema) => {
-                        return (<option value={cinema.cinema_id}>{cinema.name}</option>)
-                    })}
-                </Form.Select>
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label>Film</Form.Label>
-                <Form.Select aria-label="Default select example" onChange={(event) => setFid(event.target.value)}>
-                    {films.map((film) => {
-                        return (<option value={film.film_id}>{film.name}</option>)
+    return (
+        <div>
+            <h1>Add Film To Cinema</h1>
+            <span style={{ "color": "red" }}>{error}</span>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>Cinema Selection</Form.Label>
+                    <Form.Select aria-label="Default select example" onChange={(event) => setCid(event.target.value)}>
+                        {cinemas.map((cinema) => {
+                            return (<option key={cinema.cinema_id} value={cinema.cinema_id}>{cinema.name}</option>)
+                        })}
+                    </Form.Select>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>Film</Form.Label>
+                    <Form.Select aria-label="Default select example" onChange={(event) => setFid(event.target.value)}>
+                        {films.map((film) => {
+                            return (<option key={film.film_id} value={film.film_id}>{film.name}</option>)
 
-                    })}
+                        })}
 
-                </Form.Select>
-            </Form.Group>
-            <Form.Group className="mb-3">
-                <Button variant="primary" type="submit">
-                    Add to cinema
-                </Button>
-            </Form.Group>
-            <BackButton/>
-        </Form>
+                    </Form.Select>
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Button variant="primary" type="submit">
+                        Add to cinema
+                    </Button>
+                </Form.Group>
+                <BackButton />
+            </Form>
+        </div>
     )
 }
 

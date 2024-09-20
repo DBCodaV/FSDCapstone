@@ -18,7 +18,7 @@ function SignUp() {
         let details = { emailid: email, password: password, typeofuser: type }
         try {
             axios.post(url, details).then(result => {
-                
+
                 if (result.data === "Account created") {
                     sessionStorage.setItem("user", email);
                     navigate("/customer")
@@ -34,40 +34,44 @@ function SignUp() {
         }
     }
     return (
-        <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" onChange={(event) => setEmail(event.target.value)} />
-                <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                </Form.Text>
-            </Form.Group>
+        <div>
+            <h1>NMS Cinemas Signup</h1>
+            <span style={{ "color": "red" }}>{error}</span>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" onChange={(event) => setEmail(event.target.value)} />
+                    <Form.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                    </Form.Text>
+                </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" onChange={(event) => setPassword(event.target.value)} />
-            </Form.Group>
-            <Form.Group className="mb-3">
-                {["admin", "customer"].map((type) => (
-                    <div key={type + "-input"} className="mb-3">
-                        <Form.Check
-                            type="radio"
-                            name="grouped"
-                            id={type + "-radio"}
-                            label={type}
-                            value={type}
-                            onChange={(event) => setType(event.target.value)} />
-                    </div>
-                ))}
-            </Form.Group>
-            <Form.Group className="mb-3">
-                <Button variant="primary" type="submit">
-                    Sign Up
-                </Button>
-            </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" placeholder="Password" onChange={(event) => setPassword(event.target.value)} />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    {["admin", "customer"].map((type) => (
+                        <div key={type + "-input"} className="mb-3">
+                            <Form.Check
+                                type="radio"
+                                name="grouped"
+                                id={type + "-radio"}
+                                label={type}
+                                value={type}
+                                onChange={(event) => setType(event.target.value)} />
+                        </div>
+                    ))}
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Button variant="primary" type="submit">
+                        Sign Up
+                    </Button>
+                </Form.Group>
 
-            <Link to={"/"}>Log In</Link>
-        </Form>
+                <Link to={"/"}>Log In</Link>
+            </Form>
+        </div>
     )
 }
 export default SignUp;

@@ -64,6 +64,9 @@ function CinemaEdit() {
     }
 
     return isLoading ? (<Loading />) : (
+        <div>
+            <h1>Edit Cinema</h1>
+            <span style={{ "color": "red" }}>{error}</span>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label>Cinema Name</Form.Label>
@@ -75,24 +78,27 @@ function CinemaEdit() {
                 <Form.Control type="text" placeholder="Enter address" onChange={(event) => setAddress(event.target.value)} defaultValue={address} />
 
             </Form.Group>
+            {(films.length > 0) && (
+                <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>Click to delete film</Form.Label>
+                    <ListGroup defaultActiveKey="#film1">
+                        {films.map((film, idx) => {
+                            return (
+                                <ListGroup.Item key={film.film_id} className="mb-3 mt-3" action href={"#film" + idx} onClick={() => deleteEntry(idx)} > {film.name} </ListGroup.Item>
+                            )
+                        })}
+                    </ListGroup>
+                </Form.Group>
+            )}
 
-            <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label>Click to delete film</Form.Label>
-                <ListGroup defaultActiveKey="#film1">
-                    {films.map((film, idx) => {
-                        return (
-                            <ListGroup.Item className="mb-3 mt-3" action href={"#film" + idx} onClick={() => deleteEntry(idx)} > {film.name} </ListGroup.Item>
-                        )
-                    })}
-                </ListGroup>
-            </Form.Group>
             <Form.Group className="mb-3">
                 <Button variant="primary" type="submit">
-                    Add Cinema
+                    Submit changes
                 </Button>
             </Form.Group>
-            <BackButton/>
+            <BackButton />
         </Form>
+        </div>
     )
 
 }

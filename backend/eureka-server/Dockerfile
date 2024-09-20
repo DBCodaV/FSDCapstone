@@ -1,3 +1,3 @@
 FROM openjdk:17
-COPY ./target/eureka-server-01.01.01-SNAPSHOT.jar .
-CMD ["java","-jar","eureka-server-01.01.01-SNAPSHOT.jar"]
+COPY ./target/eureka-server-0.0.1-SNAPSHOT.jar .
+CMD ["java","-jar","eureka-server-0.0.1-SNAPSHOT.jar"]

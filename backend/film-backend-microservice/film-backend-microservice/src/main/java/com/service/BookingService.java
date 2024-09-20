@@ -28,6 +28,15 @@ public class BookingService {
 			return null;
 		}
 	}
+	public Booking getBooking(Long id) {
+		Optional<Booking> res = bookRepo.findById(id);
+		if(res.isPresent()) {
+			Booking book = res.get();
+			return book;
+		} else {
+			return null;
+		}
+	}
 	public String createBooking(Booking booking, String email) {
 		System.out.println(booking);
 		System.out.println(email);

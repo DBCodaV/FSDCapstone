@@ -2,9 +2,9 @@ version: '3.8'
 services:
   mysql-service:
     image: mysql:8.0
-    container_name: my_sql_container
+    container_name: mysql_container
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=Root@123
       - MYSQL_DATABASE=mydb
     ports:
       - 3307:3306
@@ -15,18 +15,16 @@ services:
     container_name: eureka_container
     ports:
       - 8761:8761
-    networks:
-      - public
     restart: always
     
   microserviceapp:
-    build: ./backend/backend-micro-servce/
+    build: ./backend/film-backend-microservice/film-backend-microservice/
     container_name: micro_container
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     ports:
       - 9090:9090
-     depends_on:
+    depends_on:
       - mysql-service
       - eureka-server
     restart: always

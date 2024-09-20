@@ -18,6 +18,10 @@ import MakeBooking from './pages/bookingPages/makeBooking';
 import BookingList from './pages/bookingPages/BookingList';
 import CinemaListEdit from './pages/cinemaPages/cinemaListEdit';
 import CinemaEdit from './pages/cinemaPages/CinemaEdit';
+import FilmListEdit from './pages/filmPages/FilmListEdit';
+import FilmEdit from './pages/filmPages/FilmEdit';
+import ViewBooking from './pages/bookingPages/viewBooking';
+import FilmPage from './pages/filmPages/filmPage';
 
 function App() {
   return (
@@ -48,8 +52,10 @@ function App() {
           <div>
             <Routes>
               <Route path={'/list'} element={<FilmList />} />
-              <Route path={'/info'} element={<CinemaPage />} />
+              <Route path={'/info'} element={<FilmPage />} />
               <Route path={'/add'} element={<AddFilm />} />
+              <Route path={'/listEdit'} element={<FilmListEdit/>}/>
+              <Route path={'/edit'} element={<FilmEdit />} />
             </Routes>
           </div>
         }></Route>
@@ -57,7 +63,7 @@ function App() {
           <div>
             <Routes>
               <Route path={'/list'} element={<BookingList />} />
-              <Route path={'/info'} element={<CinemaPage />} />
+              <Route path={'/info'} element={<ViewBooking />} />
               <Route path={'/add'} element={<MakeBooking />} />
             </Routes>
           </div>

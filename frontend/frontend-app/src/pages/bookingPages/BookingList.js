@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import axios from "axios";
 import Loading from "../../component/Loading";
+import { Link } from "react-router-dom";
+import BackButton from "../../component/BackButton";
 
 function BookingList() {
     const [bookList, setList] = useState([])
@@ -16,17 +18,22 @@ function BookingList() {
             })
         } catch (e) {
             console.log(e);
+            setIsLoading(false);
+            setErr(e.message);
         }
 
     }, [])
     return isLoading ? (<Loading />) :(
     <div>
-        <p>Cinema List Page</p>
+        <p>List of Bookings</p>
+        <span style={{ "color": "red" }}>{err}</span>
         {bookList.map((booking) => {
             return (
-                <p>{booking.id} - {booking.cost}</p>
+                <Link key={booking.booking_id} to={"/booking/info?id="+booking.booking_id}>{booking.film.name} - {booking.cost}</Link>
             )
         })}
+        <br/>
+        <BackButton/>
         </div>)
 }
 export default BookingList

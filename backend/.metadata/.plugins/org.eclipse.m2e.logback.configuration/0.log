@@ -2917,3 +2917,77 @@ org.eclipse.core.runtime.CoreException: Launch configuration BackendMicroServceA
 2024-09-19 15:30:18,205 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
 2024-09-19 15:30:18,218 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
 2024-09-19 15:30:18,222 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 08:18:13,096 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-09-20 08:22:44,283 [Worker-1: Launching EurekaServerApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 08:22:44,313 [Worker-1: Launching EurekaServerApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 08:22:44,319 [Worker-1: Launching EurekaServerApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/eureka-server/src/test/resources
+2024-09-20 08:22:46,630 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 08:22:46,634 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 08:22:46,637 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 08:50:54,648 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 08:50:54,679 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 08:50:54,682 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 09:26:11,570 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 09:26:11,598 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 09:26:11,602 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 09:26:24,559 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 09:26:24,596 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 09:26:24,599 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 09:38:41,440 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 09:38:41,452 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 09:38:41,459 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 09:40:12,295 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 09:40:12,311 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 09:40:12,314 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 09:40:50,153 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 09:40:50,201 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 09:40:50,216 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 09:41:02,494 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 09:41:02,517 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 09:41:02,532 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 09:41:06,703 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 09:41:06,753 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 09:41:06,763 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 10:31:13,847 [Worker-26: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_eureka-server] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/davidbates2voda/Documents/capstone/backend/eureka-server
+2024-09-20 10:31:13,848 [Worker-26: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_eureka-server] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2024-09-20 10:31:28,955 [Worker-31: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_film-backend-microservice_film-backend-microservice] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice
+2024-09-20 10:31:28,956 [Worker-31: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_film-backend-microservice_film-backend-microservice] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2024-09-20 10:31:37,295 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 10:31:37,301 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 10:31:37,311 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 10:33:31,596 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 10:33:31,637 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 10:33:31,641 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 10:34:18,526 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 10:34:18,526 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 10:34:18,533 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 10:35:03,358 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 10:35:03,359 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 10:35:03,361 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 10:39:16,447 [Worker-31: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_eureka-server] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/davidbates2voda/Documents/capstone/backend/eureka-server
+2024-09-20 10:39:16,447 [Worker-31: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_eureka-server] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2024-09-20 10:39:24,713 [Worker-31: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_film-backend-microservice_film-backend-microservice] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice
+2024-09-20 10:39:24,713 [Worker-31: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_film-backend-microservice_film-backend-microservice] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2024-09-20 10:39:34,568 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 10:39:34,569 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 10:39:34,571 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 14:02:41,081 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-09-20 14:02:52,493 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 14:02:52,544 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 14:02:52,553 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/eureka-server/src/test/resources
+2024-09-20 14:02:55,405 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 14:02:55,408 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 14:02:55,420 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 14:05:29,097 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 14:05:29,105 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 14:05:29,108 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 14:06:25,096 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-09-20 14:06:25,101 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 14:06:25,105 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice/src/test/resources
+2024-09-20 14:06:40,372 [Worker-12: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_film-backend-microservice_film-backend-microservice] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/davidbates2voda/Documents/capstone/backend/film-backend-microservice/film-backend-microservice
+2024-09-20 14:06:40,372 [Worker-12: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_film-backend-microservice_film-backend-microservice] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2024-09-20 14:06:57,507 [Worker-8: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_eureka-server] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/davidbates2voda/Documents/capstone/backend/eureka-server
+2024-09-20 14:06:57,508 [Worker-8: Launching Executing install in _home_davidbates2voda_Documents_capstone_backend_eureka-server] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2024-09-20 14:07:05,981 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 14:07:05,981 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-09-20 14:07:05,985 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/davidbates2voda/Documents/capstone/backend/eureka-server/src/test/resources

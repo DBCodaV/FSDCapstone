@@ -3,9 +3,10 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form";
+import BackButton from "../../component/BackButton";
 function AddFilm() {
     const [name, setName] = useState("")
-    const [rating, setRating] = useState("")
+    const [rating, setRating] = useState("U")
     const ratings = ["U", "PG", "12A", "12", "15", "18"]
     const [description, setDescription] = useState("")
     const [error, setError] = useState("");
@@ -31,34 +32,38 @@ function AddFilm() {
         }
     }
     return (
-        <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label>Film Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter name" onChange={(event) => setName(event.target.value)} />
+        <div>
+            <h1>Add New Film</h1>
+            <span style={{ "color": "red" }}>{error}</span>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>Film Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter name" onChange={(event) => setName(event.target.value)} />
 
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label>Film Rating</Form.Label>
-                <Form.Select aria-label="Default select example" onChange={(event) => setRating(event.target.value)}>
-                    {ratings.map((rate) => {
-                        return(<option value={rate}>{rate}</option>)
-                        
-                    })}
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>Film Rating</Form.Label>
+                    <Form.Select aria-label="Default select example" onChange={(event) => setRating(event.target.value)}>
+                        {ratings.map((rate) => {
+                            return (<option key={rate} value={rate}>{rate}</option>)
 
-                </Form.Select>
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label>Film Description</Form.Label>
-                <Form.Control type="text" placeholder="Enter description" onChange={(event) => setDescription(event.target.value)} />
+                        })}
 
-            </Form.Group>
-            <Form.Group className="mb-3">
-                <Button variant="primary" type="submit">
-                    Add Film
-                </Button>
-            </Form.Group>
+                    </Form.Select>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>Film Description</Form.Label>
+                    <Form.Control type="text" placeholder="Enter description" onChange={(event) => setDescription(event.target.value)} />
 
-        </Form>
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Button variant="primary" type="submit">
+                        Add Film
+                    </Button>
+                </Form.Group>
+                <BackButton />
+            </Form>
+        </div>
     )
 }
 export default AddFilm;

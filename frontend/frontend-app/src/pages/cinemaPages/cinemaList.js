@@ -13,10 +13,12 @@ function CinemaList() {
         try {
             axios.get(url).then(result => {
                 setList(result.data);
+                setIsLoading(false)
             })
         } catch (e) {
             console.log(e);
             setError(e.message)
+            setIsLoading(false)
         }
     }, [])
     return isLoading ? (<Loading />) : (

@@ -61,10 +61,13 @@ function MakeBooking() {
         let selectedFilm = (films.filter((fin) => (fin.film_id == film)))[0]
         let booking = { cost: cost, adults: adult, children: child, film: selectedFilm, cinema: selectedCinema }
         let headers = { 'email': email, 'Content-Type': 'application/json', 'test': 'test' }
-        console.log(headers);
         try {
             axios.post(url, booking, { headers: headers }).then(result => {
-                console.log(result);
+                if(result.data==="Booking created"){
+                    navigate("/customer")
+                } else{
+                    setErr(result.data)
+                }
             })
         } catch (e) {
             console.log(e);

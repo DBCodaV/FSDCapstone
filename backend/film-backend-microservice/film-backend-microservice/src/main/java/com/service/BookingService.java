@@ -51,6 +51,4 @@ public class BookingService {
 		loginRepo.save(user);
 		return "Booking created";
 	}
-	
-
 }
